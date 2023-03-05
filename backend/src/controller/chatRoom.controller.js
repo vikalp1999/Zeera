@@ -61,7 +61,7 @@ catch(err){
 }
 }
 
-exports.getChatroom= async(res,res)=>{
+exports.getChatroom= async(req,res)=>{
     const {id} = req.params
     try{
         const update = await ChatRoom.findById(id)
