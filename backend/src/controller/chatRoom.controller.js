@@ -57,7 +57,10 @@ exports.joinChatRoom= async(req,res)=>{
         }
 }
 catch(err){
-
+   return res.status(400).send({
+    error:true,
+    msg:err.message
+   })
 }
 }
 
@@ -89,6 +92,9 @@ exports.getChatroom= async(req,res)=>{
 
     }
     catch(err){
-
+        return res.status(400).send({
+            error:true,
+            msg:err.message
+           })
     }
 }
